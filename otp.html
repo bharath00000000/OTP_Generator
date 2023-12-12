@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otp Generator</title>
+    <style>
+        .container{
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+            padding:50px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        h1{
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        button{
+            background-color: rgb(17, 189, 17);
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        button:hover{
+            background-color: rgb(3, 62, 3);
+            transform: scale(1.2);
+        }
+        p#otp{
+            font-size: 20px;
+            font-weight: bolder;
+            color: blue;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Otp GEnerator</h1>
+        <p>OTP is generated in 6 digits: by using onclick</p>
+    <button id="generate-btn" onclick="otpGenerator()">OTP GENERATOR</button>
+    <p id="otp"></p>
+</div>
+<script>
+    function otpGenerator(){
+        var OTP="";
+        for(var i=0;i<=4;i++){
+            OTP=OTP+Math.floor(Math.random()*10)
+        }
+        console.log(typeof OTP);
+        alert("your otp is:"+OTP);
+        let a=document.getElementById('otp').innerHTML='OTP is:' +OTP;
+    }
+
+</script>
+    
+</body>
+</html>
